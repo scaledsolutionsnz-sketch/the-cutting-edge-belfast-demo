@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cutting Edge Belfast | Hair Salon | Belfast, Christchurch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#faf8f9;}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(18,10,14,0.97);backdrop-filter:blur(8px);padding:0;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#e8b4c8;text-decoration:none;padding:1.1rem 0;line-height:1.2;}
+.nav-cta{background:#c4607e;color:#fff;padding:0.55rem 1.2rem;border-radius:4px;font-weight:600;font-size:0.83rem;text-decoration:none;margin:0.75rem 0;}
+.hero{min-height:100vh;background:linear-gradient(rgba(18,6,10,0.62),rgba(18,6,10,0.62)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;padding-top:72px;}
+.hero-content{max-width:660px;margin:0 auto;padding:4rem 1.5rem;text-align:center;}
+.hero-badge{display:inline-block;background:rgba(196,96,126,0.85);color:#fff;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.2rem;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:0.8rem;}
+.hero h1 em{color:#e8b4c8;font-style:italic;}
+.hero p{font-size:1rem;color:rgba(255,255,255,0.75);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;}
+.btn-primary{background:#c4607e;color:#fff;padding:0.9rem 2rem;border-radius:4px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block;}
+.section{padding:5rem 1.5rem;}
+.section-title{font-family:'Cormorant Garamond',serif;text-align:center;font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:0.75rem;}
+.section-title em{color:#c4607e;font-style:italic;}
+.section-sub{text-align:center;color:#7a6a70;font-size:0.95rem;margin-bottom:3rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;max-width:1000px;margin:0 auto;}
+.service-card{background:#fff;border-radius:8px;padding:1.8rem;text-align:center;box-shadow:0 2px 14px rgba(30,10,18,0.07);border-top:3px solid #e8b4c8;}
+.service-icon{font-size:2rem;margin-bottom:0.75rem;}
+.service-card h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.1rem;margin-bottom:0.4rem;}
+.service-card p{color:#7a6a70;font-size:0.88rem;line-height:1.6;}
+.about{background:#120a0e;padding:5rem 1.5rem;}
+.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.about img{width:100%;border-radius:8px;height:400px;object-fit:cover;}
+.about h2{font-family:'Cormorant Garamond',serif;color:#e8b4c8;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;margin-bottom:1rem;line-height:1.2;}
+.about h2 em{color:#f0cad8;font-style:italic;}
+.about p{color:rgba(232,180,200,0.6);line-height:1.8;margin-bottom:1rem;font-size:0.95rem;}
+.reviews{background:#fff;padding:5rem 1.5rem;}
+.stars{color:#c4607e;font-size:1.4rem;}
+.rating-big{font-size:3rem;font-weight:900;}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:1000px;margin:2.5rem auto 0;}
+.review-card{background:#faf8f9;border-radius:8px;padding:1.5rem;border-left:3px solid #e8b4c8;}
+.review-card .stars{font-size:0.9rem;margin-bottom:0.5rem;}
+.review-card p{color:#444;font-size:0.9rem;line-height:1.7;font-style:italic;margin-bottom:0.75rem;}
+.reviewer{font-weight:700;font-size:0.85rem;}
+.contact{background:#faf8f9;padding:5rem 1.5rem;}
+.contact-inner{max-width:620px;margin:0 auto;}
+.form-group{margin-bottom:1.2rem;}
+.form-group label{display:block;font-weight:600;font-size:0.85rem;margin-bottom:0.4rem;color:#4a3040;}
+.form-group input,.form-group textarea{width:100%;padding:0.85rem 1rem;border:1.5px solid #e0d0d8;border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;}
+.form-group textarea{height:130px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.btn-submit{width:100%;background:#c4607e;color:#fff;border:none;padding:1rem;border-radius:4px;font-weight:600;font-size:0.95rem;cursor:pointer;}
+footer{background:#120a0e;color:rgba(232,180,200,0.5);padding:3rem 1.5rem;text-align:center;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#e8b4c8;margin-bottom:1rem;}
+footer p{font-size:0.85rem;margin-bottom:0.3rem;}
+.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(232,180,200,0.12);font-size:0.78rem;}
+@media(max-width:768px){.about-inner{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">The Cutting Edge<br>Belfast</a>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Belfast, Christchurch</div>
+    <h1>Where Great<br><em>Hair Happens</em></h1>
+    <p>A modern hair salon in Belfast, Christchurch. Cuts, colour, styling, and treatments — all delivered by Rochelle and her talented team.</p>
+    <a href="#contact" class="btn-primary">Book an Appointment</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2 class="section-title">Our <em>Services</em></h2>
+  <p class="section-sub">Everything from a fresh trim to a full colour transformation — we're here to make you feel amazing.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">✂️</div><h3>Cuts & Styling</h3><p>Expert cuts for all hair types — from classic trims to modern styles.</p></div>
+    <div class="service-card"><div class="service-icon">🎨</div><h3>Colour</h3><p>Full colour, root touch-ups, vibrant fashion colours, and balayage.</p></div>
+    <div class="service-card"><div class="service-icon">✨</div><h3>Highlights</h3><p>Foils, highlights, and lowlights to add depth and dimension.</p></div>
+    <div class="service-card"><div class="service-icon">💨</div><h3>Blowdry & Finish</h3><p>Professional blowdry, GHD styling, and special occasion hair.</p></div>
+    <div class="service-card"><div class="service-icon">💆</div><h3>Treatments</h3><p>Keratin, deep conditioning, scalp treatments, and hair repair.</p></div>
+    <div class="service-card"><div class="service-icon">👩</div><h3>Extensions</h3><p>Quality hair extensions for added length and volume.</p></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-inner">
+    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80" alt="Salon interior">
+    <div>
+      <h2>Your Local<br><em>Christchurch Salon</em></h2>
+      <p>The Cutting Edge Belfast is a welcoming, modern salon based in Belfast, Christchurch. Rochelle and her team are passionate about hair and committed to making every client feel their absolute best.</p>
+      <p>We keep up with the latest trends and techniques while always putting our clients' hair health first. Whether you're after something bold and new, or just want your regular cut done perfectly, you're in good hands here.</p>
+      <p>Call us on <strong style="color:#e8b4c8;">027 255 5880</strong> to book an appointment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div style="text-align:center;">
+    <div class="rating-big">5.0</div>
+    <div class="stars">★★★★★</div>
+    <p style="color:#888;font-size:0.9rem;margin-top:0.3rem;">Google Reviews</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Rochelle is absolutely brilliant with colour. I've been going to her for years and always leave feeling amazing. Best salon in Belfast, no question."</p><div class="reviewer">— Amber T., Belfast</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Had a full restyle and colour correction — the transformation was incredible. So professional and the salon has such a lovely, relaxed atmosphere."</p><div class="reviewer">— Stephanie K.</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Always friendly, always on time, and my hair always looks amazing after. I wouldn't go anywhere else. Highly recommend The Cutting Edge."</p><div class="reviewer">— Lynda M., Christchurch</div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <h2 class="section-title">Book an <em>Appointment</em></h2>
+    <p class="section-sub">Fill in your details and we'll be in touch to confirm your booking.</p>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+      <input type="hidden" name="accessKey" value="sf_768da8d33927e7f4f241d0a6">
+      <input type="hidden" name="subject" value="New booking from The Cutting Edge Belfast website">
+      <input type="hidden" name="redirectTo" value="https://the-cutting-edge-belfast-demo.vercel.app/thank-you.html">
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="027 000 0000" required></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Service interested in</label><input type="text" name="service" placeholder="e.g. Cut & Colour, Highlights, Blowdry..."></div>
+      <div class="form-group"><label>Message or preferred time</label><textarea name="message" placeholder="Any other details, preferred days/times..."></textarea></div>
+      <button type="submit" class="btn-submit">Book Appointment</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">The Cutting Edge Belfast</div>
+  <p>📍 Belfast, Christchurch, New Zealand</p>
+  <p>📞 <a href="tel:0272555880" style="color:rgba(232,180,200,0.5);text-decoration:none;">027 255 5880</a></p>
+  <p>✉️ <a href="mailto:thecuttingedgebelfast@gmail.com" style="color:rgba(232,180,200,0.5);text-decoration:none;">thecuttingedgebelfast@gmail.com</a></p>
+  <div class="footer-bottom">© 2025 The Cutting Edge Belfast. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
