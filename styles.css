@@ -286,3 +286,5 @@ html{scroll-padding-top:90px}body{font-size:16px}img{max-width:100%;border-radiu
 .verified-mobile-call{color:#fff;background:#202b26;border-radius:6px;white-space:nowrap}.verified-legal{animation:pageEnter .8s ease both}.verified-legal section{background:transparent;color:inherit}.verified-footer a{overflow-wrap:anywhere}.verified-map{padding-top:30px;padding-bottom:30px}#intro{animation:hideIntro 0s 1.4s forwards}@keyframes hideIntro{to{visibility:hidden;opacity:0}}
 
 .verified-button,.verified-socials a{color:inherit}.verified-button.primary{color:white}#mainNav{background:rgba(25,19,46,.94);backdrop-filter:blur(12px)}
+
+.verified-footer a{color:inherit}
