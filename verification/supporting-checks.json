@@ -1,0 +1,32 @@
+[
+  {
+    "page": "terms.html",
+    "width": 768,
+    "result": "{\n  \"forms\": 0,\n  \"map\": true,\n  \"overflow\": false\n}"
+  },
+  {
+    "page": "terms.html",
+    "width": 1440,
+    "result": "{\n  \"forms\": 0,\n  \"map\": true,\n  \"overflow\": false\n}"
+  },
+  {
+    "page": "privacy.html",
+    "width": 768,
+    "result": "{\n  \"forms\": 0,\n  \"map\": true,\n  \"overflow\": false\n}"
+  },
+  {
+    "page": "privacy.html",
+    "width": 1440,
+    "result": "{\n  \"forms\": 0,\n  \"map\": true,\n  \"overflow\": false\n}"
+  },
+  {
+    "page": "gallery.html",
+    "width": 768,
+    "result": "{\n  \"forms\": 0,\n  \"map\": true,\n  \"overflow\": false\n}"
+  },
+  {
+    "page": "gallery.html",
+    "width": 1440,
+    "result": "{\n  \"forms\": 0,\n  \"map\": true,\n  \"overflow\": false\n}"
+  }
+]

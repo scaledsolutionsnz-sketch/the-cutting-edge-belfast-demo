@@ -19,13 +19,13 @@ Audit: 16 September 2026. Existing design and stack retained.
 ## Verification
 
 - [x] Homepage inspected at 375px, 768px and 1440px. No horizontal document overflow.
-- [x] All supporting pages inspected at 375px; no horizontal document overflow.
+- [x] All supporting pages inspected at 375px, 768px and 1440px; no horizontal document overflow.
 - [x] Local image paths/internal links resolved; every homepage image decoded successfully.
 - [x] Mobile menu opens and closes after navigation.
 - [x] Three-slide rotation and pause control exercised in a browser.
 - [x] No page JavaScript errors in interaction checks.
 - [x] Contact/review screenshots inspected; native links verified without calling, emailing or posting reviews.
-- [ ] Production deployment and live smoke check (recorded below once complete).
+- [x] Production deployed; all four pages, CSS and JavaScript return HTTP 200 and match local files byte-for-byte.
 
 ## Source checks and honest limitations
 
@@ -43,3 +43,11 @@ Audit: 16 September 2026. Existing design and stack retained.
 ## Evidence
 
 `verification/business.json`, `google-listing.json`, `google-details.json`, `asset-sources.json`, `browser-checks.json`, `interactions.json`, `static-checks.json`, and screenshots. Source captures and originals are excluded from the public Vercel website, but retained locally and in GitHub.
+
+## Published build
+
+Live: https://the-cutting-edge-belfast-demo.vercel.app
+
+GitHub: https://github.com/scaledsolutionsnz-sketch/the-cutting-edge-belfast-demo
+
+Local folder: /Users/wiremubartlett/Desktop/builds/the-cutting-edge-belfast-demo

@@ -1,0 +1,35 @@
+{
+  "url": "https://the-cutting-edge-belfast-demo.vercel.app",
+  "checks": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "file": "terms.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "file": "privacy.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "file": "gallery.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "file": "site.js",
+      "status": 200,
+      "matches_local": true
+    }
+  ]
+}

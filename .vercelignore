@@ -2,3 +2,5 @@ verification
 originals
 .git
 CHECKLIST.md
+.env*
+.vercel

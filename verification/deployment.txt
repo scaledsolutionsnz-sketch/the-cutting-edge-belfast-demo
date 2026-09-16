@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_GtGLRULeky1KaVhSumxyjbdRNawg",
+    "url": "https://the-cutting-edge-belfast-demo-cizfkeasg-scaled-solutions.vercel.app",
+    "inspectorUrl": "https://vercel.com/scaled-solutions/the-cutting-edge-belfast-demo/GtGLRULeky1KaVhSumxyjbdRNawg",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_GtGLRULeky1KaVhSumxyjbdRNawg"
+  },
+  "message": "Deployment the-cutting-edge-belfast-demo-cizfkeasg-scaled-solutions.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel curl https://the-cutting-edge-belfast-demo-cizfkeasg-scaled-solutions.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect the-cutting-edge-belfast-demo-cizfkeasg-scaled-solutions.vercel.app",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod",
+      "when": "Promote to production"
+    }
+  ]
+}
+npm notice run npx
+npm notice run 'vc' deploy --prod --yes
+Vercel CLI 59.19.0 (Node.js 26.7.0)
+Deploying the-cutting-edge-belfast-demo
+Uploading [--------------------] (0.0B/1.1MB)
+Uploading [=====---------------] (290.4KB/1.1MB)
+Uploading [==========----------] (595.7KB/1.1MB)
+Uploading [===============-----] (880.4KB/1.1MB)
+Uploading [====================] (1.1MB/1.1MB)
+  Inspect         https://vercel.com/scaled-solutions/the-cutting-edge-belfast-demo/GtGLRULeky1KaVhSumxyjbdRNawg
+  Production      https://the-cutting-edge-belfast-demo-cizfkeasg-scaled-solutions.vercel.app
+Building…
+Building…
+[2K[1A[2K[G  Production      https://the-cutting-edge-belfast-demo-cizfkeasg-scaled-solutions.vercel.app
+Completing…
+▲ Aliased         https://the-cutting-edge-belfast-demo.vercel.app
