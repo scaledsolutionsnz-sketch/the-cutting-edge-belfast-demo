@@ -1,0 +1,290 @@
+- generic
+  - generic "Google Maps"
+    - generic
+      - generic
+        - application "Map · Use arrow keys to pan the map. · Get details about a place by pressing its corresponding number key." [ref=e1] focusable [tabindex]
+          - Canvas
+          - Canvas
+      - generic
+        - search
+          - generic
+            - form
+              - combobox [expanded=false, ref=e17]: The Cutting Edge Belfast
+                - StaticText "The Cutting Edge Belfast"
+            - button "Search" [ref=e18]
+            - button "Close" [ref=e19]
+      - region "Available search options for this area" [ref=e22]
+        - generic
+          - button "Restaurants" [ref=e28]
+            - generic
+              - StaticText "Restaurants"
+          - button "Hotels" [ref=e29]
+            - generic
+              - StaticText "Hotels"
+          - button "Things to do" [ref=e30]
+            - generic
+              - StaticText "Things to do"
+          - button "Transit" [ref=e31]
+            - generic
+              - StaticText "Transit"
+          - button "Parking" [ref=e32]
+            - generic
+              - StaticText "Parking"
+          - button "Pharmacies" [ref=e33]
+            - generic
+              - StaticText "Pharmacies"
+          - button "ATMs" [ref=e34]
+            - generic
+              - StaticText "ATMs"
+        - button "Next page" [ref=e35]
+      - generic
+        - generic
+          - generic
+            - list
+              - listitem [level=1]
+                - button "Menu" [ref=e23]
+              - listitem [level=1]
+                - button "Saved" [ref=e24]
+                  - StaticText "Saved"
+              - listitem [level=1]
+                - button "Recents" [ref=e25]
+                  - StaticText "Recents"
+              - listitem [level=1]
+                - button "The Cutting Edge Belfast" [ref=e26]
+                  - generic
+                  - StaticText "The Cutting Edge Belfast"
+              - listitem [level=1]
+                - button "Get app" [ref=e27]
+                  - StaticText "Get app"
+          - main "The Cutting Edge Belfast" [ref=e36]
+            - generic
+              - generic
+                - button "Photo of The Cutting Edge Belfast" [ref=e45]
+                - button "See photos" [ref=e63]
+                  - StaticText "See photos"
+              - heading "The Cutting Edge Belfast" [level=1, ref=e37]
+              - generic
+                - generic
+                  - image "4.9 stars "
+                  - image "144 reviews"
+                    - StaticText "(144)"
+              - generic
+                - button "Hairdresser" [ref=e46]
+                - image "Wheelchair accessible entrance"
+                  - StaticText ""
+              - tablist
+                - tab "Overview of The Cutting Edge Belfast" [selected, ref=e64]
+                  - generic
+                - tab "Reviews for The Cutting Edge Belfast" [ref=e65]
+                  - generic
+                - tab "About The Cutting Edge Belfast" [ref=e66]
+                  - generic
+              - region "Actions for The Cutting Edge Belfast" [ref=e38]
+                - button "Directions" [ref=e67]
+                  - StaticText "Directions"
+                - button "Save" [ref=e68]
+                  - StaticText "Save"
+                - button "Nearby" [ref=e69]
+                  - StaticText "Nearby"
+                - button "Send to phone" [ref=e70]
+                  - StaticText "Send to phone"
+                - button "Share" [ref=e71]
+                  - StaticText "Share"
+              - region "Information for The Cutting Edge Belfast" [ref=e39]
+                - generic
+                  - button "Address: 806-c Main North Road, Belfast, Christchurch 8051 " [ref=e72]
+                    - StaticText "806-c Main North Road, Belfast, Christchurch 8051"
+                  - button "Copy address" [ref=e101]
+                - button "Hours Closed · Opens 9 am Thu Show open hours for the week" [expanded=false, ref=e47]
+                  - image "Hours"
+                    - StaticText ""
+                  - StaticText "Closed"
+                  - StaticText " · Opens 9 am Thu"
+                  - image "Show open hours for the week"
+                    - StaticText ""
+                - generic
+                  - link "Website: facebook.com " [ref=e73]
+                    - StaticText "facebook.com"
+                  - generic
+                    - link "Open website" [ref=e102]
+                    - button "Copy website" [ref=e103]
+                - generic
+                  - button "Phone: 027 255 5880 " [ref=e74]
+                    - StaticText "027 255 5880"
+                  - generic
+                    - button "Copy phone number" [ref=e104]
+                    - link "Call phone number" [ref=e105]
+                - generic
+                  - button "Plus code: HJ3M+V2 Christchurch" [ref=e75]
+                    - StaticText "HJ3M+V2 Christchurch"
+                  - generic
+                    - button "Copy plus code" [ref=e106]
+                    - button "Learn more about plus codes" [ref=e107]
+              - button "Suggest an edit" [ref=e48]
+                - StaticText "Suggest an edit"
+              - heading "Photos" [level=2, ref=e40]
+              - button "Street View" [ref=e49]
+                - LabelText
+              - button "4 Photos" [ref=e50]
+                - LabelText
+                  - StaticText "4 Photos"
+              - button "Add photos & videos" [ref=e51]
+                - StaticText "Add photos & videos"
+              - heading "Review summary" [level=2, ref=e41]
+              - button "More information about the review summary" [ref=e42]
+              - LayoutTable
+                - image "5 stars, 127 reviews"
+                  - StaticText "5"
+                - image "4 stars, 15 reviews"
+                  - StaticText "4"
+                - image "3 stars, 1 review"
+                  - StaticText "3"
+                - image "2 stars, 0 reviews"
+                  - StaticText "2"
+                - image "1 stars, 1 review"
+                  - StaticText "1"
+              - StaticText "4.9"
+              - image "4.9 stars"
+              - button "144 reviews" [ref=e43]
+                - generic [ref=e52] clickable [cursor:pointer]
+                  - StaticText "144 reviews"
+              - button "Write a review" [ref=e53]
+                - StaticText "Write a review"
+              - generic
+                - generic
+                  - heading "Reviews" [level=2, ref=e76]
+                  - button "Search reviews" [ref=e84]
+              - button "Sort reviews" [ref=e54]
+                - StaticText "Sort"
+              - radiogroup "Refine reviews"
+                - radio "All reviews" [checked=true, ref=e55]
+                  - generic
+                    - StaticText "All"
+                - radio "chatty staff, mentioned in 2 reviews" [checked=false, ref=e56]
+                  - generic
+                    - StaticText "chatty staff"
+                    - StaticText "2"
+                - radio "banter, mentioned in 2 reviews" [checked=false, ref=e57]
+                  - generic
+                    - StaticText "banter"
+                    - StaticText "2"
+                - radio "lovely staff, mentioned in 2 reviews" [checked=false, ref=e58]
+                  - generic
+                    - StaticText "lovely staff"
+                    - StaticText "2"
+                - radio "talented hairdresser, mentioned in 2 reviews" [checked=false, ref=e59]
+                  - generic
+                    - StaticText "talented hairdresser"
+                    - StaticText "2"
+                - button "View 6 more Topics" [ref=e60]
+                  - generic
+                    - StaticText "+6"
+              - generic
+                - button "Photo of Lauren Sharland" [ref=e85]
+                - generic
+                  - button "Lauren Sharland 1 review" [ref=e86]
+                    - StaticText "Lauren Sharland"
+                    - StaticText "1 review"
+                  - button "Actions for Lauren Sharland's review" [ref=e87]
+                - image "5 stars"
+                - StaticText "a month ago"
+                - StaticText "Rochelle and the other ladies were so welcoming and chatty, easy place to wait around for my turn, and my hair looks amazing! definitely will come back!!!"
+                - button "Like" [ref=e77]
+                  - generic [ref=e88] clickable [cursor:pointer]
+                    - StaticText "Like"
+                - button "Share Lauren Sharland's review." [ref=e78]
+                  - generic [ref=e89] clickable [cursor:pointer]
+                    - StaticText "Share"
+                - generic
+                  - StaticText "Response from the owner a month ago"
+                - StaticText "Thank you Lauren 🥰 …"
+              - generic
+                - button "Photo of Jacob Laurenson" [ref=e90]
+                - generic
+                  - button "Jacob Laurenson 1 review" [ref=e91]
+                    - StaticText "Jacob Laurenson"
+                    - StaticText "1 review"
+                  - button "Actions for Jacob Laurenson's review" [ref=e92]
+                - image "5 stars"
+                - StaticText "a month ago"
+                - StaticText "Wonderful staff, always quality haircuts 👍 …"
+                - button "Like" [ref=e79]
+                  - generic [ref=e93] clickable [cursor:pointer]
+                    - StaticText "Like"
+                - button "Share Jacob Laurenson's review." [ref=e80]
+                  - generic [ref=e94] clickable [cursor:pointer]
+                    - StaticText "Share"
+                - generic
+                  - StaticText "Response from the owner a month ago"
+                - StaticText "Thank you :) "
+              - generic
+                - button "Photo of Wicked Sheila" [ref=e95]
+                - generic
+                  - button "Wicked Sheila Local Guide · 1,064 reviews · 1,094 photos" [ref=e96]
+                    - StaticText "Wicked Sheila"
+                    - StaticText "Local Guide · 1,064 reviews · 1,094 photos"
+                  - button "Actions for Wicked Sheila's review" [ref=e97]
+                - image "5 stars"
+                - StaticText "10 months ago"
+                - generic
+                  - StaticText "These ladies are fantastic. I walked in just minutes before closing time to ask if I could make an appointment for my daughter or if I can just walk in tomorrow. To my surprise that offered to cut her hair right then. And what's even …"
+                  - button "See more" [expanded=false, ref=e98]
+                    - StaticText "More"
+                - button "Like" [ref=e81]
+                  - generic [ref=e99] clickable [cursor:pointer]
+                    - StaticText "Like"
+                - button "Share Wicked Sheila's review." [ref=e82]
+                  - generic [ref=e100] clickable [cursor:pointer]
+                    - StaticText "Share"
+                - generic
+                  - StaticText "Response from the owner Edited a month ago"
+                - StaticText "Thank you very much.   Happy holidaying.  😎\n …"
+              - button "More reviews (141)" [ref=e61]
+                - generic [ref=e83] clickable [cursor:pointer]
+                  - StaticText "More reviews (141)"
+              - link "About this data" [ref=e62]
+                - generic
+                  - StaticText "About this data"
+              - StaticText "You're seeing a limited view of Google Maps."
+              - button "See more" [ref=e44]
+        - button "Collapse side panel" [ref=e11]
+      - generic
+        - button "Google apps" [expanded=false, ref=e20]
+          - StaticText "  "
+        - link "Sign in" [ref=e3]
+          - StaticText "  "
+          - StaticText "Sign in"
+      - generic
+        - generic
+        - generic
+          - generic
+            - button "Show Your Location" [ref=e12]
+          - generic [ref=e4] clickable [cursor:pointer]
+            - generic
+              - button "Zoom in" [ref=e21]
+            - button "Zoom out" [ref=e13]
+        - generic
+          - generic [ref=e5] clickable [cursor:pointer]
+            - button "Browse Street View images" [ref=e14]
+          - button "Street View" [ref=e6]
+        - generic
+        - generic
+          - generic [ref=e15] clickable [cursor:pointer]
+            - LabelText
+              - StaticText "Layers"
+          - button "Layers" [expanded=false, ref=e16]
+        - generic
+          - generic
+            - image
+            - image
+            - image
+            - image
+      - contentinfo
+        - StaticText "Map data ©2026 Google"
+        - button "New Zealand" [ref=e7]
+        - button "Terms" [ref=e8]
+        - button "Privacy" [ref=e9]
+        - button "Send Product Feedback" [ref=e10]
+      - button "100 m" [ref=e2]
+        - LabelText
+          - StaticText "100 m"

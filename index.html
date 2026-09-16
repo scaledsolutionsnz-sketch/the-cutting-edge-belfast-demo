@@ -1,726 +1,163 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Cutting Edge Belfast | Hair Salon | Belfast, Christchurch</title>
-  <meta name="description" content="The Cutting Edge Belfast, a friendly hair salon on Main North Road, Belfast, Christchurch. Cuts, colour, kids' cuts and styling by Rochelle and the team. Book today." />
-  <meta name="theme-color" content="#0d0a16" />
-  <meta property="og:title" content="The Cutting Edge Belfast | Hair Salon" />
-  <meta property="og:description" content="A friendly local hair salon in Belfast, Christchurch. Cuts, colour and styling by Rochelle and the team." />
-  <meta property="og:image" content="https://the-cutting-edge-belfast-demo.vercel.app/img/storefront.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --dark:     #0d0a16;
-      --dark-2:   #130f22;
-      --surface:  #1a1330;
-      --surface2: #221a3f;
-      --accent:   #7c3aed;
-      --accent-light: #9d5cf5;
-      --accent-rose:  #d9c2ff;
-      --lime:     #a3e635;
-      --lime-deep:#84cc16;
-      --cream:    #f8f4f6;
-      --cream-2:  #f0e8ec;
-      --text-dark: #1a1018;
-      --text-mid:  #5a4550;
-      --text-light: #9a8890;
-      --white:    #ffffff;
-      --nav-h:    72px;
-      --radius:   14px;
-      --trans:    0.3s cubic-bezier(0.4,0,0.2,1);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Barlow', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
-
-    /* ── NAV ── */
-    #mainNav {
-      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-      padding: 0 2rem; height: var(--nav-h);
-      display: flex; align-items: center; justify-content: space-between;
-      transition: background var(--trans), box-shadow var(--trans);
-    }
-    #mainNav.scrolled { background: rgba(14,8,16,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
-    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--accent-rose); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; transition: color var(--trans); }
-    .nav-links a:hover { color: var(--accent-rose); }
-    .nav-cta { background: var(--accent); color: #fff; padding: 0.6rem 1.4rem; border-radius: 4px; font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background var(--trans), transform var(--trans); }
-    .nav-cta:hover { background: var(--accent-light); transform: translateY(-1px); }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; flex-direction: column; gap: 5px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--accent-rose); border-radius: 2px; transition: var(--trans); }
-    .mobile-menu { display: none; position: fixed; top: var(--nav-h); left: 0; width: 100%; background: rgba(14,8,16,0.98); padding: 2rem; z-index: 999; flex-direction: column; gap: 1.5rem; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.1rem; letter-spacing: 0.06em; }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh; position: relative; display: flex; align-items: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0; z-index: 0;
-      background: linear-gradient(120deg, rgba(13,10,22,0.86) 0%, rgba(20,15,40,0.62) 48%, rgba(13,10,22,0.78) 100%),
-                  url('img/storefront.jpg') center/cover no-repeat fixed;
-    }
-    .hero-content {
-      position: relative; z-index: 1; max-width: 700px;
-      padding: calc(var(--nav-h) + 4rem) 2rem 5rem 8vw;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(124,58,237,0.3); border: 1px solid rgba(163,230,53,0.5);
-      color: var(--lime); font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase; padding: 0.4rem 1rem;
-      border-radius: 100px; margin-bottom: 1.5rem;
-    }
-    .hero h1 {
-      font-family: 'Oswald', sans-serif; font-size: clamp(3.2rem, 7vw, 5.5rem);
-      font-weight: 600; line-height: 1.0; letter-spacing: 0.02em;
-      text-transform: uppercase; margin-bottom: 1.25rem; color: #fff;
-    }
-    .hero h1 em { color: var(--lime); font-style: normal; display: block; }
-    .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.72); line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; font-weight: 300; }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-    .btn-primary {
-      background: var(--accent); color: #fff; padding: 1rem 2.2rem;
-      border-radius: 4px; font-family: 'Oswald', sans-serif; font-weight: 500;
-      font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase;
-      text-decoration: none; transition: all var(--trans);
-    }
-    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.4); }
-    .btn-outline {
-      background: transparent; color: rgba(255,255,255,0.8); padding: 1rem 2rem;
-      border: 1px solid rgba(255,255,255,0.25); border-radius: 4px;
-      font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: all var(--trans);
-    }
-    .btn-outline:hover { border-color: var(--accent-rose); color: var(--accent-rose); }
-    .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 1; }
-    .scroll-dot { width: 6px; height: 6px; background: var(--lime); border-radius: 50%; margin: 0 auto; animation: bounce 1.8s infinite; opacity: 0.8; }
-    @keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-10px)} }
-    /* ── HERO REVIEW WIDGET ── */
-    .hero-rw { margin-top: 2.5rem; max-width: 430px; background: rgba(19,15,34,0.66); border: 1px solid rgba(163,230,53,0.28); border-radius: var(--radius); padding: 1.15rem 1.35rem; backdrop-filter: blur(8px); transition: opacity 0.45s ease; }
-    .hero-rw.fade { opacity: 0; }
-    .hero-rw-top { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0.6rem; }
-    .hero-rw-g { width: 24px; height: 24px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-family: 'Oswald',sans-serif; font-weight: 700; font-size: 0.85rem; color: #7c3aed; }
-    .hero-rw-stars { color: #f5c518; font-size: 0.82rem; letter-spacing: 1px; }
-    .hero-rw-tag { margin-left: auto; font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-    .hero-rw-quote { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.9); font-style: italic; }
-    .hero-rw-name { margin-top: 0.55rem; font-size: 0.78rem; font-weight: 600; color: var(--lime); }
-
-    /* ── BEFORE / AFTER ── */
-    .ba { background: var(--dark-2); }
-    .ba .section-title { color: var(--accent-rose); }
-    .ba-wrap { max-width: 480px; margin: 2.5rem auto 0; }
-    .ba-slider { --pos: 50%; position: relative; width: 100%; aspect-ratio: 3/4; border-radius: var(--radius); overflow: hidden; user-select: none; touch-action: none; box-shadow: 0 24px 60px rgba(0,0,0,0.5); cursor: ew-resize; }
-    .ba-slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .ba-after { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
-    .ba-label { position: absolute; bottom: 1rem; z-index: 3; font-family: 'Oswald',sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: rgba(13,10,22,0.72); padding: 0.35rem 0.8rem; border-radius: 100px; }
-    .ba-label.before { right: 1rem; }
-    .ba-label.after { left: 1rem; border: 1px solid var(--lime); }
-    .ba-handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; background: var(--lime); z-index: 4; transform: translateX(-50%); pointer-events: none; }
-    .ba-handle::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 42px; height: 42px; border-radius: 50%; background: var(--lime); box-shadow: 0 4px 16px rgba(0,0,0,0.45); }
-    .ba-handle::before { content: '⟨ ⟩'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 5; font-size: 0.85rem; font-weight: 700; color: #17110c; letter-spacing: 0px; }
-
-    /* ── TRUST BAR ── */
-    .trust-bar { background: var(--surface); padding: 1.5rem 2rem; border-bottom: 1px solid rgba(124,58,237,0.15); }
-    .trust-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 0.6rem; color: rgba(255,255,255,0.6); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; }
-    .trust-item span:first-child { color: var(--accent-rose); font-size: 1.1rem; }
-
-    /* ── SECTIONS BASE ── */
-    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
-    section { padding: 6rem 0; }
-
-    /* ── SERVICES ── */
-    .services { background: var(--cream); }
-    .section-eyebrow { font-family: 'Oswald', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
-    .section-title { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 1rem; }
-    .section-title em { color: var(--accent); font-style: normal; }
-    .section-sub { color: var(--text-mid); font-size: 0.95rem; line-height: 1.7; max-width: 540px; margin-bottom: 3.5rem; font-weight: 400; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-    .service-card {
-      background: #fff; border-radius: var(--radius); padding: 2rem 1.75rem;
-      border: 1px solid rgba(124,58,237,0.1); transition: all var(--trans);
-      position: relative; overflow: hidden;
-    }
-    .service-card::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-rose));
-      transform: scaleX(0); transform-origin: left; transition: transform var(--trans);
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(124,58,237,0.12); }
-    .service-card:hover::before { transform: scaleX(1); }
-    .svc-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-    .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 0.5rem; }
-    .service-card p { color: var(--text-mid); font-size: 0.88rem; line-height: 1.65; }
-    .svc-price { display: inline-block; margin-top: 0.75rem; font-size: 0.82rem; font-weight: 600; color: var(--accent); letter-spacing: 0.04em; }
-
-    /* ── ABOUT ── */
-    .about { background: var(--dark-2); }
-    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-img-wrap { position: relative; }
-    .about-img-wrap img { width: 100%; height: 520px; object-fit: cover; border-radius: var(--radius); }
-    .about-img-accent {
-      position: absolute; bottom: -1.5rem; right: -1.5rem;
-      width: 180px; height: 180px; object-fit: cover; border-radius: var(--radius);
-      border: 4px solid var(--dark-2);
-    }
-    .about-text .section-title { color: var(--accent-rose); }
-    .about-text .section-sub { color: rgba(255,255,255,0.55); max-width: 100%; }
-    .about-text p { color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
-    .about-highlight { display: flex; gap: 0.75rem; align-items: flex-start; margin: 1.75rem 0; }
-    .about-highlight-icon { width: 42px; height: 42px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
-    .about-highlight-text h4 { font-family: 'Oswald', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--accent-rose); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
-    .about-highlight-text p { color: rgba(255,255,255,0.5); font-size: 0.87rem; margin: 0; }
-
-    /* ── GALLERY ── */
-    .gallery { background: var(--surface2); }
-    .gallery .section-title { color: var(--accent-rose); }
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 280px 280px; gap: 1rem; }
-    .gallery-item { border-radius: 10px; overflow: hidden; position: relative; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .gallery-item:hover img { transform: scale(1.05); }
-    .gallery-item:first-child { grid-row: 1 / 3; }
-    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,8,16,0.7) 0%, transparent 50%); opacity: 0; transition: opacity var(--trans); }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-    /* ── REVIEWS ── */
-    .reviews { background: var(--cream); }
-    .reviews-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem; }
-    .reviews-score { display: flex; align-items: center; gap: 1.25rem; }
-    .score-big { font-family: 'Oswald', sans-serif; font-size: 4rem; font-weight: 700; line-height: 1; color: var(--text-dark); }
-    .score-details { display: flex; flex-direction: column; gap: 0.3rem; }
-    .stars-row { display: flex; gap: 2px; }
-    .star { color: #f5c518; font-size: 1.1rem; }
-    .score-count { color: var(--text-light); font-size: 0.83rem; }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .review-card {
-      background: #fff; border-radius: var(--radius); padding: 1.75rem;
-      border: 1px solid rgba(124,58,237,0.08);
-      box-shadow: 0 2px 16px rgba(124,58,237,0.06);
-      transition: transform var(--trans), box-shadow var(--trans);
-    }
-    .review-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(124,58,237,0.1); }
-    .review-stars { display: flex; gap: 2px; margin-bottom: 0.75rem; }
-    .review-stars .star { font-size: 0.9rem; }
-    .review-card blockquote { font-style: italic; color: var(--text-mid); font-size: 0.92rem; line-height: 1.75; margin-bottom: 1.25rem; }
-    .reviewer { display: flex; align-items: center; gap: 0.75rem; }
-    .reviewer-avatar { width: 38px; height: 38px; background: linear-gradient(135deg, var(--accent), var(--accent-rose)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.9rem; color: #fff; }
-    .reviewer-info strong { font-size: 0.88rem; font-weight: 600; color: var(--text-dark); display: block; }
-    .reviewer-info span { font-size: 0.78rem; color: var(--text-light); }
-    .reviews-cta { text-align: center; margin-top: 3rem; }
-    .btn-review { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent); color: #fff; padding: 0.9rem 2rem; border-radius: 4px; font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.9rem; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; transition: all var(--trans); }
-    .btn-review:hover { background: var(--accent-light); transform: translateY(-2px); }
-
-    /* ── BOOKING ── */
-    .booking { background: var(--dark); }
-    .booking-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: start; }
-    .booking-info .section-title { color: var(--accent-rose); }
-    .booking-info p { color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 2rem; font-size: 0.95rem; }
-    .contact-detail { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem; color: rgba(255,255,255,0.65); font-size: 0.92rem; }
-    .contact-detail a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color var(--trans); }
-    .contact-detail a:hover { color: var(--accent-rose); }
-    .contact-icon { width: 38px; height: 38px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .booking-form { background: var(--surface); border: 1px solid rgba(124,58,237,0.18); border-radius: var(--radius); padding: 2.5rem; }
-    .form-title { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-rose); margin-bottom: 1.75rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { margin-bottom: 1.1rem; }
-    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.45rem; }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 8px; color: #fff; font-family: 'Barlow', sans-serif;
-      font-size: 0.93rem; padding: 0.85rem 1rem; transition: border-color var(--trans);
-    }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
-    .form-group select option { background: var(--surface); }
-    .form-group textarea { height: 110px; resize: vertical; }
-    .btn-submit { width: 100%; background: var(--accent); color: #fff; border: none; padding: 1rem; border-radius: 4px; font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: all var(--trans); margin-top: 0.5rem; }
-    .btn-submit:hover { background: var(--accent-light); transform: translateY(-1px); }
-
-    /* ── FOOTER ── */
-    footer { background: rgba(14,8,16,0.98); padding: 4rem 0 2rem; border-top: 1px solid rgba(124,58,237,0.12); }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-    .footer-brand .logo { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 500; color: var(--accent-rose); display: block; margin-bottom: 1rem; letter-spacing: 0.06em; text-transform: uppercase; }
-    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.88rem; line-height: 1.7; }
-    .footer-col h4 { font-family: 'Oswald', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-rose); margin-bottom: 1.25rem; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 0.6rem; color: rgba(255,255,255,0.4); font-size: 0.87rem; }
-    .footer-col ul li a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color var(--trans); }
-    .footer-col ul li a:hover { color: var(--accent-rose); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom span { color: rgba(255,255,255,0.25); font-size: 0.8rem; }
-
-    /* ── ICONS ── */
-    .svc-icon svg { width: 32px; height: 32px; stroke: var(--accent); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-    .trust-item svg { width: 18px; height: 18px; stroke: var(--accent-rose); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .about-highlight-icon svg { width: 20px; height: 20px; stroke: var(--accent-rose); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .contact-icon svg { width: 18px; height: 18px; stroke: var(--accent-rose); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .contact-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; margin: 0 0 2rem; }
-    .contact-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; }
-    .contact-actions svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .btn-review svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
-
-    /* ── SCROLL REVEAL ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .about-inner, .booking-inner, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .gallery-item:first-child { grid-row: auto; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .hero-content { padding-left: 2rem; }
-      .about-img-accent { display: none; }
-      .reviews-header { flex-direction: column; align-items: flex-start; }
-    }
-    @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.8rem; }
-      .trust-inner { gap: 1.5rem; }
-    }
-  </style>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Cutting Edge Belfast | Hair Salon | Belfast, Christchurch</title>
+<meta content="The Cutting Edge Belfast, a friendly hair salon on Main North Road, Belfast, Christchurch. Cuts, colour, kids' cuts and styling by Rochelle and the team. Book today." name="description"/>
+<meta content="#0d0a16" name="theme-color"/>
+<meta content="The Cutting Edge Belfast | Hair Salon" property="og:title"/>
+<meta content="A friendly local hair salon in Belfast, Christchurch. Cuts, colour and styling by Rochelle and the team." property="og:description"/>
+<meta content="https://the-cutting-edge-belfast-demo.vercel.app/img/storefront.jpg" property="og:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/></head>
 <body>
-
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="#" class="nav-logo">The Cutting Edge<br>Belfast</a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#booking" class="nav-cta">Book Now</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<a class="nav-logo" href="#">The Cutting Edge<br/>Belfast</a>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="nav-cta" href="#booking">Book Now</a></li>
+</ul>
+<a class="verified-mobile-call" href="tel:+64272555880">Call</a><button aria-expanded="false" aria-label="Menu" class="hamburger" data-menu-button="" id="hamburger">
+<span></span><span></span><span></span>
+</button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services" onclick="closeMobile()">Services</a>
-  <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#gallery" onclick="closeMobile()">Gallery</a>
-  <a href="#reviews" onclick="closeMobile()">Reviews</a>
-  <a href="#booking" onclick="closeMobile()">Book Now</a>
+<div class="mobile-menu" data-mobile-menu="" id="mobileMenu">
+<a href="#services" onclick="closeMobile()">Services</a>
+<a href="#about" onclick="closeMobile()">About</a>
+<a href="#gallery" onclick="closeMobile()">Gallery</a>
+<a href="#reviews" onclick="closeMobile()">Reviews</a>
+<a href="#booking" onclick="closeMobile()">Book Now</a>
 </div>
-
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-badge reveal">Belfast, Christchurch</div>
-    <h1 class="reveal reveal-delay-1">Where Great<br><em>Hair Happens</em></h1>
-    <p class="reveal reveal-delay-2">A modern salon in Belfast, Christchurch. Cuts, colour, balayage, treatments and styling, all delivered with care by Rochelle and her team.</p>
-    <div class="hero-actions reveal reveal-delay-3">
-      <a href="#booking" class="btn-primary">Book an Appointment</a>
-      <a href="#services" class="btn-outline">See Our Services</a>
-    </div>
-    <div class="hero-rw reveal reveal-delay-4" id="heroRw">
-      <div class="hero-rw-top">
-        <span class="hero-rw-g">G</span>
-        <span class="hero-rw-stars">★★★★★</span>
-        <span class="hero-rw-tag">Google review</span>
-      </div>
-      <p class="hero-rw-quote" id="heroRwQuote">"Went there one Friday afternoon and met the best hairdresser I've ever had in my life. This place is a hidden gem."</p>
-      <div class="hero-rw-name" id="heroRwName">Cha Cha</div>
-    </div>
-  </div>
-  <div class="hero-scroll"><div class="scroll-dot"></div></div>
-</section>
-
+<div class="hero-bg"><img alt="The Cutting Edge Belfast salon and hair styling" decoding="async" fetchpriority="high" height="872" loading="eager" sizes="100vw" src="img/storefront.jpg" srcset="img/storefront-480.webp 480w, img/storefront-960.webp 960w, img/storefront-1600.webp 1600w, img/storefront.jpg 1804w" width="1804"/><img alt="The Cutting Edge Belfast salon and hair styling" decoding="async" fetchpriority="auto" height="2048" loading="lazy" sizes="100vw" src="img/cut-3.jpg" srcset="img/cut-3-480.webp 480w, img/cut-3-960.webp 960w, img/cut-3.jpg 1536w" width="1536"/><img alt="The Cutting Edge Belfast salon and hair styling" decoding="async" fetchpriority="auto" height="1200" loading="lazy" sizes="100vw" src="img/after.jpg" srcset="img/after-480.webp 480w, img/after.jpg 900w" width="900"/></div>
+<div class="hero-content">
+<div class="hero-badge reveal">The Cutting Edge Belfast</div>
+<h1 class="reveal reveal-delay-1">Where Great<br/><em>Hair Happens</em></h1>
+<p class="reveal reveal-delay-2">Haircuts, restyles and friendly conversation with Rochelle and the team in Belfast, Christchurch.</p>
+<div class="hero-actions reveal reveal-delay-3">
+<a class="btn-primary" href="#booking">Book an Appointment</a>
+<a class="btn-outline" href="https://search.google.com/local/writereview?placeid=ChIJpWjkLTGMMW0RKUCrgDrDiJ8" rel="noopener" target="_blank">Leave a Review</a>
+</div>
+<a class="verified-rating" href="https://search.google.com/local/reviews?placeid=ChIJpWjkLTGMMW0RKUCrgDrDiJ8" rel="noopener" target="_blank"><span>4.9 from 144 Google reviews</span></a>
+</div>
+<div class="hero-scroll"><div class="scroll-dot"></div></div>
+<button aria-pressed="false" class="slide-control" type="button">Pause slideshow</button></section>
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Loved on Google</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg><span>Cuts, Colour &amp; Styling</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Main North Road, Belfast</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 5.95 5.95l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>027 255 5880</span></div>
-  </div>
+<div class="trust-inner">
+<div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg><span>Loved on Google</span></div>
+<div class="trust-item"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" x2="8.12" y1="4" y2="15.88"></line><line x1="14.47" x2="20" y1="14.48" y2="20"></line><line x1="8.12" x2="12" y1="8.12" y2="12"></line></svg><span>Cuts, Colour &amp; Styling</span></div>
+<div class="trust-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Main North Road, Belfast</span></div>
+<div class="trust-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 5.95 5.95l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>027 255 5880</span></div>
 </div>
-
+</div>
 <!-- SERVICES -->
 <section class="services" id="services">
-  <div class="container">
-    <div class="section-eyebrow reveal">What We Offer</div>
-    <h2 class="section-title reveal reveal-delay-1">Our <em>Services</em></h2>
-    <p class="section-sub reveal reveal-delay-2">From a fresh everyday trim to a full colour transformation, we tailor every service to you.</p>
-    <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
-        <h3>Cuts & Styling</h3>
-        <p>Expert cuts for all lengths and hair types. From classic to contemporary, we get your vision right.</p>
-        <span class="svc-price">From $45</span>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
-        <h3>Full Colour</h3>
-        <p>Single-process colour, fashion colours, root touch-ups, and full head colour by experienced colourists.</p>
-        <span class="svc-price">From $85</span>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 14.4 9 22 9.3 16 13.9 18 21.3 12 17 6 21.3 8 13.9 2 9.3 9.6 9 12 2"/></svg></div>
-        <h3>Balayage & Highlights</h3>
-        <p>Foils, balayage, ombre, and colour melt, soft, natural-looking dimension that suits every face.</p>
-        <span class="svc-price">From $110</span>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8a2.5 2.5 0 1 1-2.5 2.5"/></svg></div>
-        <h3>Blowdry & Finish</h3>
-        <p>Professional blowdry, GHD styling, bouncy blowout, and special occasion hair up-dos.</p>
-        <span class="svc-price">From $35</span>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3>Treatments</h3>
-        <p>Keratin smoothing, deep conditioning, scalp therapy, and bond repair for damaged or dry hair.</p>
-        <span class="svc-price">From $65</span>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-        <h3>Hair Extensions</h3>
-        <p>Tape-in and clip-in extensions for added length, volume, and confidence. Quality guaranteed.</p>
-        <span class="svc-price">From $250</span>
-      </div>
-    </div>
-  </div>
-</section>
-
+<div class="container">
+<div class="section-eyebrow reveal">What We Offer</div>
+<h2 class="section-title reveal reveal-delay-1">Our <em>Services</em></h2>
+<p class="section-sub reveal reveal-delay-2">From a fresh everyday trim to a full colour transformation, we tailor every service to you.</p>
+<div class="services-grid">
+<div class="service-card reveal reveal-delay-1"><img alt="Hair styling at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-1.jpg" srcset="img/cut-1-480.webp 480w, img/cut-1-960.webp 960w, img/cut-1.jpg 1536w" width="1536"/><h3>Haircuts</h3><p>Cuts from $30.</p></div>
+<div class="service-card reveal reveal-delay-2"><img alt="Hair styling at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-2.jpg" srcset="img/cut-2-480.webp 480w, img/cut-2-960.webp 960w, img/cut-2.jpg 1536w" width="1536"/><h3>Clipper cuts</h3><p>Clipper cuts from $20–$25. Balding clipper add $5.</p></div>
+<div class="service-card reveal reveal-delay-3"><img alt="Hair styling at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-3.jpg" srcset="img/cut-3-480.webp 480w, img/cut-3-960.webp 960w, img/cut-3.jpg 1536w" width="1536"/><h3>Restyles</h3><p>Restyles from $45–$55.</p></div>
+<div class="service-card reveal reveal-delay-1"><img alt="Hair styling at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-4.jpg" srcset="img/cut-4-480.webp 480w, img/cut-4-960.webp 960w, img/cut-4.jpg 1536w" width="1536"/><h3>Kids’ restyles</h3><p>Kids’ restyles from $35.</p></div>
+<div class="service-card reveal reveal-delay-2"><img alt="Hair styling at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-1.jpg" srcset="img/cut-1-480.webp 480w, img/cut-1-960.webp 960w, img/cut-1.jpg 1536w" width="1536"/><h3>Razor cuts</h3><p>Razor cuts from $40.</p></div>
+<div class="service-card reveal reveal-delay-3"><img alt="Hair styling at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-2.jpg" srcset="img/cut-2-480.webp 480w, img/cut-2-960.webp 960w, img/cut-2.jpg 1536w" width="1536"/><h3>Fringes &amp; beards</h3><p>Fringes and beards from $5–$15.</p></div>
+</div>
+</div>
+<div class="verified-wrap"><p>Starting prices published on our Facebook page. Confirm the price for your cut with the team.</p></div></section>
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-img-wrap reveal">
-        <img src="img/after.jpg" alt="A fresh cut and style at The Cutting Edge Belfast" />
-        <img class="about-img-accent" src="img/cut-2.jpg" alt="A sharp finish at The Cutting Edge Belfast" />
-      </div>
-      <div class="about-text">
-        <div class="section-eyebrow reveal">About Us</div>
-        <h2 class="section-title reveal reveal-delay-1">Your Local<br><em>Belfast Salon</em></h2>
-        <p class="reveal reveal-delay-2">The Cutting Edge Belfast is a welcoming, modern salon in the heart of Belfast, Christchurch. Rochelle and her talented team bring passion, precision, and personality to every appointment.</p>
-        <p class="reveal reveal-delay-2">We stay current with the latest trends and techniques, from lived-in colour and balayage to colour corrections and keratin treatments, while always putting the health of your hair first.</p>
-        <div class="about-highlight reveal reveal-delay-3">
-          <div class="about-highlight-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <div class="about-highlight-text">
-            <h4>Friendly & Relaxed Atmosphere</h4>
-            <p>Walk in feeling stressed, leave feeling amazing. That's our promise to every client.</p>
-          </div>
-        </div>
-        <div class="about-highlight reveal reveal-delay-4">
-          <div class="about-highlight-icon"><svg viewBox="0 0 24 24"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
-          <div class="about-highlight-text">
-            <h4>Colour Specialists</h4>
-            <p>We take pride in our colour work, blondes, brunettes, reds, and everything in between.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="about-inner">
+<div class="about-img-wrap reveal">
+<img alt="A fresh cut and style at The Cutting Edge Belfast" decoding="async" height="1200" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/after.jpg" srcset="img/after-480.webp 480w, img/after.jpg 900w" width="900"/>
+<img alt="A sharp finish at The Cutting Edge Belfast" class="about-img-accent" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-2.jpg" srcset="img/cut-2-480.webp 480w, img/cut-2-960.webp 960w, img/cut-2.jpg 1536w" width="1536"/>
+</div>
+<div class="about-text">
+<div class="section-eyebrow reveal">About Us</div>
+<h2 class="section-title reveal reveal-delay-1">Your Local<br/><em>Belfast Salon</em></h2>
+<p class="reveal reveal-delay-2">The Cutting Edge Belfast is a welcoming, modern salon in the heart of Belfast, Christchurch. Rochelle and her talented team bring passion, precision, and personality to every appointment.</p>
+<p class="reveal reveal-delay-2">Visit Rochelle and the team for a haircut or a fresh restyle. Call to discuss the look you have in mind.</p>
+<div class="about-highlight reveal reveal-delay-3">
+<div class="about-highlight-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+<div class="about-highlight-text">
+<h4>Friendly &amp; Relaxed Atmosphere</h4>
+<p>Visit Rochelle and the team for a haircut or a fresh restyle. Call to discuss the look you have in mind.</p>
+</div>
+</div>
+<div class="about-highlight reveal reveal-delay-4">
+<div class="about-highlight-icon"><svg viewBox="0 0 24 24"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg></div>
+<div class="about-highlight-text">
+<h4>Cuts &amp; restyles</h4>
+<p>Visit Rochelle and the team for a haircut or a fresh restyle. Call to discuss the look you have in mind.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- BEFORE / AFTER -->
 <section class="ba" id="before-after">
-  <div class="container" style="text-align:center;">
-    <div class="section-eyebrow reveal" style="color:var(--lime);">See the difference</div>
-    <h2 class="section-title reveal reveal-delay-1">Before <em style="color:var(--lime);">&amp;</em> After</h2>
-    <p class="section-sub reveal reveal-delay-2" style="color:rgba(255,255,255,0.55);margin-left:auto;margin-right:auto;">Drag the slider to see one of our transformations. Same happy customer, brand new look.</p>
-    <div class="ba-wrap reveal reveal-delay-2">
-      <div class="ba-slider" id="baSlider">
-        <img class="ba-before" src="img/before.jpg" alt="Before the haircut" />
-        <img class="ba-after" src="img/after.jpg" alt="After the haircut" />
-        <span class="ba-label before">Before</span>
-        <span class="ba-label after">After</span>
-        <div class="ba-handle"></div>
-      </div>
-    </div>
-  </div>
+<div class="container" style="text-align:center;">
+<div class="section-eyebrow reveal" style="color:var(--lime);">See the difference</div>
+<h2 class="section-title reveal reveal-delay-1">Before <em style="color:var(--lime);">&amp;</em> After</h2>
+<p class="section-sub reveal reveal-delay-2" style="color:rgba(255,255,255,0.55);margin-left:auto;margin-right:auto;">Drag the slider to see one of our transformations. Same happy customer, brand new look.</p>
+<div class="ba-wrap reveal reveal-delay-2">
+<div class="ba-slider" id="baSlider">
+<img alt="Before the haircut" class="ba-before" decoding="async" height="1200" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/before.jpg" srcset="img/before-480.webp 480w, img/before.jpg 900w" width="900"/>
+<img alt="After the haircut" class="ba-after" decoding="async" height="1200" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/after.jpg" srcset="img/after-480.webp 480w, img/after.jpg 900w" width="900"/>
+<span class="ba-label before">Before</span>
+<span class="ba-label after">After</span>
+<div class="ba-handle"></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
-  <div class="container">
-    <div class="section-eyebrow reveal">Our Work</div>
-    <h2 class="section-title reveal reveal-delay-1" style="color:var(--accent-rose);">Styles We <em style="color:var(--accent-light);">Love</em></h2>
-    <p class="section-sub reveal reveal-delay-2" style="color:rgba(255,255,255,0.5);margin-bottom:2.5rem;">A look at some of the transformations that leave our chairs every day.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item reveal">
-        <img src="img/cut-3.jpg" alt="Fresh men's cut and style at The Cutting Edge Belfast" loading="lazy" />
-        <div class="gallery-overlay"></div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-1">
-        <img src="img/after.jpg" alt="Sharp kids' cut at The Cutting Edge Belfast" loading="lazy" />
-        <div class="gallery-overlay"></div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-2">
-        <img src="img/cut-2.jpg" alt="Beard trim and tidy up" loading="lazy" />
-        <div class="gallery-overlay"></div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-1">
-        <img src="img/cut-1.jpg" alt="Kids' haircut in the chair" loading="lazy" />
-        <div class="gallery-overlay"></div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-2">
-        <img src="img/cut-4.jpg" alt="Happy client after a cut" loading="lazy" />
-        <div class="gallery-overlay"></div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-eyebrow reveal">Our Work</div>
+<h2 class="section-title reveal reveal-delay-1" style="color:var(--accent-rose);">Styles We <em style="color:var(--accent-light);">Love</em></h2>
+<p class="section-sub reveal reveal-delay-2" style="color:rgba(255,255,255,0.5);margin-bottom:2.5rem;">A look at some of the transformations that leave our chairs every day.</p>
+<div class="gallery-grid">
+<div class="gallery-item reveal">
+<img alt="Fresh men's cut and style at The Cutting Edge Belfast" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-3.jpg" srcset="img/cut-3-480.webp 480w, img/cut-3-960.webp 960w, img/cut-3.jpg 1536w" width="1536"/>
+<div class="gallery-overlay"></div>
+</div>
+<div class="gallery-item reveal reveal-delay-1">
+<img alt="Sharp kids' cut at The Cutting Edge Belfast" decoding="async" height="1200" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/after.jpg" srcset="img/after-480.webp 480w, img/after.jpg 900w" width="900"/>
+<div class="gallery-overlay"></div>
+</div>
+<div class="gallery-item reveal reveal-delay-2">
+<img alt="Beard trim and tidy up" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-2.jpg" srcset="img/cut-2-480.webp 480w, img/cut-2-960.webp 960w, img/cut-2.jpg 1536w" width="1536"/>
+<div class="gallery-overlay"></div>
+</div>
+<div class="gallery-item reveal reveal-delay-1">
+<img alt="Kids' haircut in the chair" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-1.jpg" srcset="img/cut-1-480.webp 480w, img/cut-1-960.webp 960w, img/cut-1.jpg 1536w" width="1536"/>
+<div class="gallery-overlay"></div>
+</div>
+<div class="gallery-item reveal reveal-delay-2">
+<img alt="Happy client after a cut" decoding="async" height="2048" loading="lazy" sizes="(max-width: 767px) 100vw, 50vw" src="img/cut-4.jpg" srcset="img/cut-4-480.webp 480w, img/cut-4-960.webp 960w, img/cut-4.jpg 1536w" width="1536"/>
+<div class="gallery-overlay"></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- REVIEWS -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <div class="reviews-header">
-      <div>
-        <div class="section-eyebrow reveal">What Our Clients Say</div>
-        <h2 class="section-title reveal reveal-delay-1">Loved by <em>Belfast</em></h2>
-      </div>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <blockquote>"These ladies are fantastic. I walked in just minutes before closing to ask about an appointment for my daughter, and to my surprise they offered to cut her hair right then. Amazing service."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-avatar">WS</div>
-          <div class="reviewer-info"><strong>Wicked Sheila</strong><span>Local Guide · Google review</span></div>
-        </div>
-      </div>
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <blockquote>"Would give Rochelle 10 or more stars. She has owned the Cutting Edge for over 25 years. I don't trust hairdressers easily after plenty of bad experiences, but here I absolutely do."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-avatar">SF</div>
-          <div class="reviewer-info"><strong>Stephne Fahey</strong><span>Local Guide · Google review</span></div>
-        </div>
-      </div>
-      <div class="review-card reveal reveal-delay-3">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <blockquote>"Went there one Friday afternoon and met the best hairdresser I've ever had in my life. This place is a hidden gem. Monique, you are such a talented lady. I love my new haircut."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-avatar">CC</div>
-          <div class="reviewer-info"><strong>Cha Cha</strong><span>Google review</span></div>
-        </div>
-      </div>
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <blockquote>"LOVE coming here. Our family have been having our hair cut by Jane and Rochelle for ages. The loveliest and most hilarious ladies, always a fun time. Highly recommended."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-avatar">DT</div>
-          <div class="reviewer-info"><strong>D Tuhi</strong><span>Local Guide · Google review</span></div>
-        </div>
-      </div>
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <blockquote>"Recently moved to the area. I love the way Jane cuts my hair, and she has a fun personality, so as well as a great haircut you get a good laugh. Thank you."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-avatar">JK</div>
-          <div class="reviewer-info"><strong>Jan K</strong><span>Local Guide · Google review</span></div>
-        </div>
-      </div>
-      <div class="review-card reveal reveal-delay-3">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <blockquote>"What a fun loving experience today when I got rid of my long hair. An awesome atmosphere and a damn nice haircut. Thanks ladies, you just made my day."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-avatar">MK</div>
-          <div class="reviewer-info"><strong>Michael Krieg</strong><span>Google review</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="reviews-cta reveal">
-      <a href="review.html" class="btn-review">Leave Us a Review</a>
-    </div>
-  </div>
-</section>
-
+<section class="verified-section" id="reviews"><div class="verified-wrap"><h2>4.9 from 144 Google reviews</h2><p>Selected Google review excerpts and ratings. Dates are shown as Google displayed them on 16 September 2026.</p><div class="verified-grid"><article class="verified-card"><span aria-label="5 out of 5 stars" class="verified-stars"><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg></span><blockquote>“Rochelle and the other ladies were so welcoming and chatty,”</blockquote><small>Review excerpt</small><strong>Lauren Sharland</strong><small>a month ago · Google</small></article><article class="verified-card"><span aria-label="5 out of 5 stars" class="verified-stars"><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg><svg aria-hidden="true" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg></span><blockquote>“Wonderful staff, always quality haircuts”</blockquote><small>Review excerpt</small><strong>Jacob Laurenson</strong><small>a month ago · Google</small></article></div><div class="verified-actions"><a class="verified-button primary" href="https://search.google.com/local/writereview?placeid=ChIJpWjkLTGMMW0RKUCrgDrDiJ8" rel="noopener" target="_blank">Leave a Review</a><a class="verified-button" href="https://search.google.com/local/reviews?placeid=ChIJpWjkLTGMMW0RKUCrgDrDiJ8" rel="noopener" target="_blank">See all our Google reviews</a></div></div></section>
 <!-- BOOKING -->
-<section class="booking" id="booking">
-  <div class="container">
-    <div class="booking-inner">
-      <div class="booking-info">
-        <div class="section-eyebrow reveal">Get In Touch</div>
-        <h2 class="section-title reveal reveal-delay-1" style="color:var(--accent-rose);">Book an <em>Appointment</em></h2>
-        <p class="reveal reveal-delay-2">Ready for a fresh new look? Call or email us, or fill in the form and we'll confirm your appointment. We'd love to have you in the chair.</p>
-        <div class="contact-actions reveal reveal-delay-2">
-          <a href="tel:0272555880" class="btn-primary"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 5.95 5.95l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Us</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thecuttingedgebelfast@gmail.com&su=Appointment%20Enquiry&body=Hi%20Rochelle%2C%0A%0AI%27d%20like%20to%20book%20in%20for%3A%0A" target="_blank" rel="noopener" class="btn-outline"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email Us</a>
-        </div>
-        <div class="reveal reveal-delay-3">
-          <div class="contact-detail">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 5.95 5.95l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-            <a href="tel:0272555880">027 255 5880</a>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <a href="mailto:thecuttingedgebelfast@gmail.com">thecuttingedgebelfast@gmail.com</a>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <span>806c Main North Road, Belfast, Christchurch</span>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
-            <span>Mon to Sat: 9am to 5pm</span>
-          </div>
-        </div>
-      </div>
-      <div class="booking-form reveal reveal-delay-2">
-        <div class="form-title">Request a Booking</div>
-        <form action="https://api.staticforms.xyz/submit" method="post">
-          <input type="hidden" name="apiKey" value="sf_768da8d33927e7f4f241d0a6" />
-          <input type="hidden" name="subject" value="New Booking, The Cutting Edge Belfast" />
-          <div class="form-row">
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" name="firstName" placeholder="Rochelle" required />
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" name="lastName" placeholder="Smith" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" name="phone" placeholder="027 000 0000" required />
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="your@email.com" />
-          </div>
-          <div class="form-group">
-            <label>Service</label>
-            <select name="service" required>
-              <option value="" disabled selected>Select a service</option>
-              <option value="Cut & Style">Cut &amp; Style</option>
-              <option value="Full Colour">Full Colour</option>
-              <option value="Balayage / Highlights">Balayage / Highlights</option>
-              <option value="Colour Correction">Colour Correction</option>
-              <option value="Blowdry & Finish">Blowdry &amp; Finish</option>
-              <option value="Treatment">Treatment</option>
-              <option value="Hair Extensions">Hair Extensions</option>
-              <option value="Not sure, need advice">Not sure, need advice</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Preferred Time</label>
-            <input type="text" name="preferred_time" placeholder="e.g. Thursday morning" />
-          </div>
-          <div class="form-group">
-            <label>Message (Optional)</label>
-            <textarea name="message" placeholder="Any other details about what you're after..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Book Appointment</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="verified-section" id="booking"><div class="verified-wrap"><h2>Visit your Belfast salon</h2><p>Call Rochelle and the team to arrange your visit.</p><div class="verified-actions"><a class="verified-button primary" href="tel:+64272555880">Call The Cutting Edge Belfast</a><a class="verified-button" href="mailto:thecuttingedgebelfast@gmail.com">Email The Cutting Edge Belfast</a></div><p>806-c Main North Road, Belfast, Christchurch 8051</p><p>Check current opening hours on Google before visiting.</p><div class="verified-socials"><a aria-label="The Cutting Edge Belfast on Facebook" href="https://www.facebook.com/thecuttingedgebelfast/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12Z"></path></svg></a><a aria-label="The Cutting Edge Belfast on Instagram" href="https://www.instagram.com/thecuttingedgebelfast/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a></div></div></section>
 <!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="logo">The Cutting Edge Belfast</span>
-        <p>A welcoming hair salon in Belfast, Christchurch. Cuts, colour, and everything in between, done beautifully, every time.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li>Cuts &amp; Styling</li>
-          <li>Full Colour</li>
-          <li>Balayage &amp; Highlights</li>
-          <li>Blowdry &amp; Finish</li>
-          <li>Treatments</li>
-          <li>Hair Extensions</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:0272555880">027 255 5880</a></li>
-          <li><a href="mailto:thecuttingedgebelfast@gmail.com">thecuttingedgebelfast@gmail.com</a></li>
-          <li>Belfast, Christchurch</li>
-          <li>Mon to Sat: 9am to 5pm</li>
-          <li><a href="review.html">Leave a Review</a></li>
-          <li><a href="terms.html">Terms &amp; Conditions</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 The Cutting Edge Belfast. All rights reserved.</span>
-      <span>806c Main North Road, Belfast, Christchurch</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Sticky nav
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
-
-  // Scroll reveal
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-  // Hero reveals immediately
-  document.querySelectorAll('.hero .reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), 120 + i * 100));
-
-  // Hamburger
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  });
-  function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
-
-  // Hero review widget rotation
-  (function(){
-    var q=document.getElementById('heroRwQuote'), n=document.getElementById('heroRwName'), w=document.getElementById('heroRw');
-    if(!q||!n||!w) return;
-    var R=[
-      {q:'"Went there one Friday afternoon and met the best hairdresser I\'ve ever had in my life. This place is a hidden gem."', n:'Cha Cha'},
-      {q:'"These ladies are fantastic. I walked in minutes before closing and they still offered to cut my daughter\'s hair. Amazing service."', n:'Wicked Sheila · Local Guide'},
-      {q:'"Would give Rochelle 10 or more stars. She has owned the Cutting Edge for over 25 years."', n:'Stephne Fahey · Local Guide'},
-      {q:'"LOVE coming here. The loveliest and most hilarious ladies, always a fun time. Highly recommended."', n:'D Tuhi · Local Guide'},
-      {q:'"An awesome atmosphere and a damn nice haircut. Thanks ladies, you just made my day."', n:'Michael Krieg'}
-    ];
-    var i=0;
-    setInterval(function(){
-      i=(i+1)%R.length;
-      w.classList.add('fade');
-      setTimeout(function(){ q.textContent=R[i].q; n.textContent=R[i].n; w.classList.remove('fade'); }, 450);
-    }, 5000);
-  })();
-
-  // Before / After slider
-  (function(){
-    var s=document.getElementById('baSlider');
-    if(!s) return;
-    var dragging=false;
-    function setPos(clientX){
-      var r=s.getBoundingClientRect();
-      var p=(clientX-r.left)/r.width*100;
-      p=Math.max(2,Math.min(98,p));
-      s.style.setProperty('--pos', p+'%');
-    }
-    s.addEventListener('pointerdown', function(e){ dragging=true; try{s.setPointerCapture(e.pointerId);}catch(_){} setPos(e.clientX); });
-    s.addEventListener('pointermove', function(e){ if(dragging) setPos(e.clientX); });
-    window.addEventListener('pointerup', function(){ dragging=false; });
-    s.addEventListener('pointercancel', function(){ dragging=false; });
-  })();
-</script>
-</body>
+<section aria-label="Business location" class="verified-map"><div class="verified-wrap"><iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=The%20Cutting%20Edge%20Belfast%20806-c%20Main%20North%20Road%2C%20Belfast%2C%20Christchurch%208051&amp;output=embed" title="Map of The Cutting Edge Belfast, 806-c Main North Road, Belfast, Christchurch 8051"></iframe></div></section><footer class="verified-footer"><div class="verified-wrap"><div><strong>The Cutting Edge Belfast</strong><p>806-c Main North Road, Belfast, Christchurch 8051</p><div class="verified-socials"><a aria-label="The Cutting Edge Belfast on Facebook" href="https://www.facebook.com/thecuttingedgebelfast/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12Z"></path></svg></a><a aria-label="The Cutting Edge Belfast on Instagram" href="https://www.instagram.com/thecuttingedgebelfast/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a></div></div><div><a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="/terms.html">Terms &amp; Conditions</a><a href="/privacy.html">Privacy Policy</a><p>© 2026 The Cutting Edge Belfast</p></div></div></footer><script defer="" src="site.js"></script></body>
 </html>

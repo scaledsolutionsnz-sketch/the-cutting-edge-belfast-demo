@@ -1,0 +1,29 @@
+{
+  "name": "The Cutting Edge Belfast",
+  "phone": "+64272555880",
+  "email": "thecuttingedgebelfast@gmail.com",
+  "address": "806-c Main North Road, Belfast, Christchurch 8051",
+  "place_id": "ChIJpWjkLTGMMW0RKUCrgDrDiJ8",
+  "rating": "4.9",
+  "count": 144,
+  "social": [
+    "https://www.facebook.com/thecuttingedgebelfast/",
+    "https://www.instagram.com/thecuttingedgebelfast/"
+  ],
+  "read_reviews": "https://search.google.com/local/reviews?placeid=ChIJpWjkLTGMMW0RKUCrgDrDiJ8",
+  "write_review": "https://search.google.com/local/writereview?placeid=ChIJpWjkLTGMMW0RKUCrgDrDiJ8",
+  "reviews": [
+    [
+      "Lauren Sharland",
+      5,
+      "a month ago",
+      "Rochelle and the other ladies were so welcoming and chatty,"
+    ],
+    [
+      "Jacob Laurenson",
+      5,
+      "a month ago",
+      "Wonderful staff, always quality haircuts"
+    ]
+  ]
+}

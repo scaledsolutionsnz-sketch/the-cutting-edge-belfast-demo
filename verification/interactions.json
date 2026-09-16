@@ -1,0 +1,6 @@
+{
+  "menu": "{\n  \"closed\": true,\n  \"expanded\": \"true\",\n  \"visible\": true\n}",
+  "rotation": "{\n  \"after\": 2,\n  \"before\": 1,\n  \"pauseWorks\": true,\n  \"rotated\": true,\n  \"slides\": 3\n}",
+  "broken_images": "[]",
+  "console_errors": ""
+}
