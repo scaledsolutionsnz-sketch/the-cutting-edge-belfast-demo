@@ -1,0 +1,546 @@
+[
+  {
+    "width": 375,
+    "data": {
+      "images": [
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 760,
+          "naturalRatio": 2.0718232044198897,
+          "ratio": "auto 1804 / 872",
+          "service": false,
+          "src": "img/storefront.jpg",
+          "w": 375
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 760,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-3.jpg",
+          "w": 375
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 760,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 375
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 168.65625,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-1.jpg",
+          "w": 253
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 168.65625,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-2.jpg",
+          "w": 253
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 168.65625,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-3.jpg",
+          "w": 253
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 168.65625,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-4.jpg",
+          "w": 253
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 168.65625,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-1.jpg",
+          "w": 253
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 168.65625,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-2.jpg",
+          "w": 253
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 520,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 414.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/before.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 414.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 417.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-3.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 417.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 417.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-2.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 417.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-1.jpg",
+          "w": 311
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 417.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-4.jpg",
+          "w": 311
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 768,
+    "data": {
+      "images": [
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 1000,
+          "naturalRatio": 2.070080862533693,
+          "ratio": "auto 1804 / 872",
+          "service": false,
+          "src": "img/storefront.jpg",
+          "w": 768
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 1000,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-3.jpg",
+          "w": 768
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 1000,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 768
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 188,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-1.jpg",
+          "w": 282
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 188,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-2.jpg",
+          "w": 282
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 188,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-3.jpg",
+          "w": 282
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 188,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-4.jpg",
+          "w": 282
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 188,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-1.jpg",
+          "w": 282
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 188,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-2.jpg",
+          "w": 282
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 520,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 704
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 640,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/before.jpg",
+          "w": 480
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 640,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 480
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 461.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-3.jpg",
+          "w": 344
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 461.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 344
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 461.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-2.jpg",
+          "w": 344
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 461.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-1.jpg",
+          "w": 344
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 461.65625,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-4.jpg",
+          "w": 344
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "data": {
+      "images": [
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 1000,
+          "naturalRatio": 2.0719424460431655,
+          "ratio": "auto 1804 / 872",
+          "service": false,
+          "src": "img/storefront.jpg",
+          "w": 1440
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 1000,
+          "naturalRatio": 0.7498697238144867,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-3.jpg",
+          "w": 1440
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 1000,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 1440
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 135.328125,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-1.jpg",
+          "w": 203
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 135.328125,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-2.jpg",
+          "w": 203
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 135.328125,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-3.jpg",
+          "w": 203
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 135.328125,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-4.jpg",
+          "w": 203
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 135.328125,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-1.jpg",
+          "w": 203
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 135.328125,
+          "naturalRatio": 0.75,
+          "ratio": "3 / 2",
+          "service": true,
+          "src": "img/cut-2.jpg",
+          "w": 203
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 520,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 518
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 520,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-2.jpg",
+          "w": 518
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 640,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/before.jpg",
+          "w": 480
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 640,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 480
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 576,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-3.jpg",
+          "w": 361.328125
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 280,
+          "naturalRatio": 0.75,
+          "ratio": "auto 900 / 1200",
+          "service": false,
+          "src": "img/after.jpg",
+          "w": 361.328125
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 280,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-2.jpg",
+          "w": 361.34375
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 280,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-1.jpg",
+          "w": 361.328125
+        },
+        {
+          "distorted": false,
+          "fit": "cover",
+          "h": 280,
+          "naturalRatio": 0.75,
+          "ratio": "auto 1536 / 2048",
+          "service": false,
+          "src": "img/cut-4.jpg",
+          "w": 361.34375
+        }
+      ],
+      "overflow": false
+    }
+  }
+]

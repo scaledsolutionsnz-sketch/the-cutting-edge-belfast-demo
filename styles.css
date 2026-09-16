@@ -1,3 +1,5 @@
+/* Let responsive CSS determine image height instead of HTML pixel dimensions. */
+img{height:auto}
 
     :root {
       --dark:     #0d0a16;
@@ -288,3 +290,6 @@ html{scroll-padding-top:90px}body{font-size:16px}img{max-width:100%;border-radiu
 .verified-button,.verified-socials a{color:inherit}.verified-button.primary{color:white}#mainNav{background:rgba(25,19,46,.94);backdrop-filter:blur(12px)}
 
 .verified-footer a{color:inherit}
+
+/* Keep direct card photos from shrinking within equal-height grid cards. */
+.svc>img,.service-card>img{height:auto;flex-shrink:0}

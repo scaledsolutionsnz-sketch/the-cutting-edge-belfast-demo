@@ -51,3 +51,13 @@ Live: https://the-cutting-edge-belfast-demo.vercel.app
 GitHub: https://github.com/scaledsolutionsnz-sketch/the-cutting-edge-belfast-demo
 
 Local folder: /Users/wiremubartlett/Desktop/builds/the-cutting-edge-belfast-demo
+
+## Image shape correction
+
+- [x] Responsive image heights override fixed HTML pixel-height attributes.
+- [x] Service photographs share the same rendered dimensions at 375px, 768px and 1440px.
+- [x] All homepage images checked for stretched rendering; none detected.
+- [x] No horizontal overflow at those sizes.
+- [x] Source photos unchanged; cover cropping preserves image proportions.
+
+Evidence: `verification/image-shapes.json` and `verification/cards-*.png`.
